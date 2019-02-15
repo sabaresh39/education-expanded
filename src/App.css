@@ -1,33 +1,158 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navBar{
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 2px 4px 0 #e9e9e9;
+  background: #fff;
+
+  position: fixed;
+  top: 0;
+
+}
+.navBar .navBar-actions{
+  float: right;
+  line-height: 34px;
+}
+.navBar .navBar-actions span{
+  margin: 0 15px;
+  color: #444444;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.page-content{
+  width: 100%;
+  max-width: 880px;
+  //padding: 0 5%;
+  margin: 100px auto 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-content .tutorials-title{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.75;
+  color: #252b33;
+  margin: 55px 0 -23px;
+}
+.page-content .tutorial{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tutorial-card{
+  width: 321px;
+  max-width: 321px;
+  box-shadow: 5px 5px 25px 0 #e9e9e9;
+  background-color: #ffffff;
+  padding: 23px 27px;
+  margin-top: 55px;
+}
+.tutorial-card.hasBg{
+  background: url('./images/group-6.svg') no-repeat left bottom;
+}
+.tutorial-card-title{
+  font-size: 24px;
+  color: #252b33;
+  margin-bottom: 15px;
+}
+.tutorial-card-btn{
+  display: inline-block;
+  width: 133px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  background-color: #4184f3;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  padding: 9.5px 0;
+  border-radius: 2px;
+  border: 0;
+  outline: 0;
+}
+.tutorial-card-img{
+  display: inline-block;
+  width: calc(100% - 135px);
+  text-align: center;
+  vertical-align: bottom;
+}
+.tutorial-card-img img{
+  vertical-align: bottom;
+}
+.tutorial-description{
+  width: 481px;
+  max-width: 481px;
+  margin-top: 55px;
+}
+.tutorial-description-dec{
+  font-size: 18px;
+  line-height: 1.5555555555555556;
+  color: rgba(0, 0, 0, 0.51);
+  margin-bottom: 25px;
+}
+.tutorial-description-actions button{
+  margin-right: 30px;
+  border: 0;
+  font-size: 14px;
+  color: #252b33;
+  outline: 0;
+}
+.tutorial-video {
+    width: 100%;
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 43px;
+    font-size: 14px;
+  color: #252b33;
+}
+.tutorial-video.first {
+  margin-top: 55px;
+}
+.query{
+  max-width: 50%;
+}
+.query-title{
+  font-size: 24px;
+  color: #444444;
+  margin-top: 75px;
+}
+.query textarea{
+  width: 100%;
+  height: 166px;
+  margin-top: 37px;
+  box-shadow: inset 0 1px 3px 0 #e9e9e9;
+  background-color: #f9f9f9;
+  border: 0;
+}
+.query button{
+  display: block;  
+  margin: 19px 0 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 480px) {
+  .navBar{
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .navBar .navBar-actions{
+    float: none;
+  }
+  .query{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .page-content .tutorials-title{
+    text-align: center;
+  }
+  .page-content .tutorial{
+    justify-content: center;
+    padding: 0 5%;
   }
 }
